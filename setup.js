@@ -4,7 +4,7 @@ const $ = (el) => document.querySelector(el),
     sgrid = $("#sgrid"),
     lets = $("#lets"),
     nums = $("#nums"),
-    prevSheet = JSON.parse(localStorage.getItem("vals"))
+    prevSheet = JSON.parse(localStorage.getItem("vals")) || []
 let allCells = []
 
 sgrid.style.gridTemplateRows = `repeat(${size[1]},3ch)`
