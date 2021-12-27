@@ -19,8 +19,10 @@ function createCell(x, y) {
     cell.id = newId
     cell.title = newId
     prevSheet.forEach((cellObj) => {
-        if (cellObj.id == cell.id)
-            cell.innerHTML = cellObj.firstVal
+        if (cellObj.id == cell.id) {
+            console.log(cellObj.newVal);
+            cell.value = cellObj.newVal || cellObj.firstVal
+        }
     })
     sgrid.appendChild(cell)
     allCells.push(cell)
